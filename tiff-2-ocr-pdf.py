@@ -6,7 +6,7 @@ from PyPDF2 import PdfFileMerger
 import glob
 
 print("\n TIFF to OCR PDF & PDF/A Conversion \n")
-print("\n Date: 20 May 2022 \n\n")
+print("\n Have a nice day \n\n")
 
 
 '''

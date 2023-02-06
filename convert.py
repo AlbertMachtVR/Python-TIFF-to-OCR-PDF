@@ -30,6 +30,15 @@ for file in dir_files: # look at every file in the current directory
                 tesseract = 'tesseract "' + combined_pic + '" "' + combined_pic + '-ocr" PDF'
                 print(tesseract)
                 os.system(tesseract)
+        # convert TIFF(s) to PDF(s) with OCR data
+        tiffs = [f for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))]
+        for pic in tiffs:
+            if pic.endswith('.tiff', '.tif'):
+                combined_pic = folder + '/' + pic
+                print(combined_pic)
+                tesseract = 'tesseract "' + combined_pic + '" "' + combined_pic + '-ocr" PDF'
+                print(tesseract)
+                os.system(tesseract)
         # combine OCR'd PDFs into one
         ocr_pdfs = [f for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))]
 
